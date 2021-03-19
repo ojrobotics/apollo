@@ -66,7 +66,7 @@ cc_test(
     name = "ge3_controller_test",
     size = "small",
     srcs = ["ge3_controller_test.cc"],
-    data = ["//modules/canbus:test_data"],
+    data = ["//modules/canbus:canbus_testdata"],
     deps = [
         ":ge3_controller",
         "//modules/common/util",

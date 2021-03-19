@@ -56,7 +56,6 @@ cc_library(
     hdrs = ["devkit_controller.h"],
     deps = [
         ":devkit_message_manager",
-        "//modules/canbus/common:canbus_common",
         "//modules/canbus/proto:canbus_conf_cc_proto",
         "//modules/canbus/proto:chassis_cc_proto",
         "//modules/canbus/proto:vehicle_parameter_cc_proto",
@@ -71,7 +70,7 @@ cc_test(
     name = "devkit_controller_test",
     size = "small",
     srcs = ["devkit_controller_test.cc"],
-    data = ["//modules/canbus:test_data"],
+    data = ["//modules/canbus:canbus_testdata"],
     deps = [
         ":devkit_controller",
         "@com_google_googletest//:gtest_main",

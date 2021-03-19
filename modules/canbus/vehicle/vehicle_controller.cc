@@ -117,20 +117,16 @@ ErrorCode VehicleController::Update(const ControlCommand &control_command) {
         break;
       }
     }
-    auto error_code = SetDrivingMode(mode);
-    if (error_code != ErrorCode::OK) {
-      AERROR << "Failed to set driving mode.";
-      return error_code;
-    }
+    SetDrivingMode(mode);
   }
 
   if (driving_mode() == Chassis::COMPLETE_AUTO_DRIVE ||
       driving_mode() == Chassis::AUTO_SPEED_ONLY) {
-    Gear(control_command.gear_location());
-    Throttle(control_command.throttle());
-    Acceleration(control_command.acceleration());
-    Brake(control_command.brake());
-    SetEpbBreak(control_command);
+    Gear(control_command.gear_location());           // Omar check this
+    Throttle(control_command.throttle());            // pedal/speed command
+    Acceleration(control_command.acceleration());    // Acc command
+    Brake(control_command.brake());                 // brake command
+    SetEpbBreak(control_command);                   // Omar check this
     SetLimits();
   }
 
@@ -140,7 +136,7 @@ ErrorCode VehicleController::Update(const ControlCommand &control_command) {
     if (control_command.steering_rate() > steering_rate_threshold) {
       Steer(control_command.steering_target(), control_command.steering_rate());
     } else {
-      Steer(control_command.steering_target());
+      Steer(control_command.steering_target());         // steering command
     }
   }
 
@@ -148,9 +144,9 @@ ErrorCode VehicleController::Update(const ControlCommand &control_command) {
        driving_mode() == Chassis::AUTO_SPEED_ONLY ||
        driving_mode() == Chassis::AUTO_STEER_ONLY) &&
       control_command.has_signal()) {
-    SetHorn(control_command);
-    SetTurningSignal(control_command);
-    SetBeam(control_command);
+    SetHorn(control_command);                   // Omar check this
+    SetTurningSignal(control_command);         // Omar check this
+    SetBeam(control_command);                  // Omar check this
   }
 
   return ErrorCode::OK;

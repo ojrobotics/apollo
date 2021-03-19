@@ -57,7 +57,7 @@ cc_test(
     name = "neolix_edu_controller_test",
     size = "small",
     srcs = ["neolix_edu_controller_test.cc"],
-    data = ["//modules/canbus:test_data"],
+    data = ["//modules/canbus:canbus_testdata"],
     deps = [
         ":neolix_edu_controller",
         "@com_google_googletest//:gtest_main",

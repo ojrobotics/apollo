@@ -46,7 +46,7 @@ cc_test(
     name = "ch_controller_test",
     size = "small",
     srcs = ["ch_controller_test.cc"],
-    data = ["//modules/canbus:test_data"],
+    data = ["//modules/canbus:canbus_testdata"],
     deps = [
         ":ch_controller",
         "@com_google_googletest//:gtest_main",
