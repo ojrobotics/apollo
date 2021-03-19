@@ -93,7 +93,7 @@ message Chassis {
 
   optional bool wiper = 19;
   optional bool disengage_status = 20 [deprecated = true];
-  optional DrivingMode driving_mode = 21 [default = COMPLETE_MANUAL];
+  optional DrivingMode driving_mode = 21 [default = COMPLETE_AUTO_DRIVE];
   optional ErrorCode error_code = 22 [default = NO_ERROR];
   optional GearPosition gear_location = 23;
 
@@ -124,8 +124,6 @@ message Chassis {
   // replace this [id 23]
 
   optional apollo.common.VehicleID vehicle_id = 33;
-
-  optional int32 battery_soc_percentage = 34 [default = -1];
 }
 
 message ChassisGPS {
