@@ -3,13 +3,11 @@ load("//tools:cpplint.bzl", "cpplint")
 
 package(default_visibility = ["//visibility:public"])
 
-CANBUS_COPTS = ["-DMODULE_NAME=\\\"canbus\\\""]
-
 cc_library(
-    name = "canbus_component_lib",
+    name = "canbus_lib",
     srcs = ["canbus_component.cc"],
     hdrs = ["canbus_component.h"],
-    copts = CANBUS_COPTS,
+    copts = ["-DMODULE_NAME=\\\"canbus\\\""],
     deps = [
         "//cyber",
         "//modules/canbus/common:canbus_common",
@@ -31,25 +29,23 @@ cc_test(
     size = "small",
     srcs = ["canbus_test.cc"],
     deps = [
-        ":canbus_component_lib",
+        ":canbus_lib",
         "//modules/common/status",
         "@com_google_googletest//:gtest_main",
     ],
 )
 
 cc_binary(
-    name = "libcanbus_component.so",
+    name = "libcanbus.so",
     linkshared = True,
     linkstatic = False,
     deps = [
-        ":canbus_component_lib",
+        ":canbus_lib",
     ],
 )
 
-#TODO(storypku):
-# split test_data for each vehicle
 filegroup(
-    name = "test_data",
+    name = "canbus_testdata",
     srcs = glob(["testdata/**"]),
 )
 
