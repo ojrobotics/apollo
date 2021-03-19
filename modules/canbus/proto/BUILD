@@ -238,27 +238,6 @@ py_proto_library(
     ],
 )
 
-
-
-cc_proto_library(
-    name = "kia_niro_cc_proto",
-    deps = [
-        ":kia_niro_proto",
-    ],
-)
-
-proto_library(
-    name = "kia_niro_proto",
-    srcs = ["kia_niro.proto"],
-)
-
-py_proto_library(
-    name = "kia_niro_py_pb2",
-    deps = [
-        ":kia_niro_proto",
-    ],
-)
-
 cc_proto_library(
     name = "chassis_detail_cc_proto",
     deps = [
@@ -279,7 +258,6 @@ proto_library(
         ":transit_proto",
         ":wey_proto",
         ":zhongyun_proto",
-        ":kia_niro_proto",
         "//modules/common/configs/proto:vehicle_config_proto",
     ],
 )
@@ -297,9 +275,6 @@ py_proto_library(
         ":transit_py_pb2",
         ":wey_py_pb2",
         ":zhongyun_py_pb2",
-        ":kia_niro_py_pb2",
         "//modules/common/configs/proto:vehicle_config_py_pb2",
     ],
 )
-
-
