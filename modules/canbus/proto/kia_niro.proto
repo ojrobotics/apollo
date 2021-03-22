@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+package apollo.canbus;
+
+
+// send
+message NiroCommand {
+  optional uint64 timestamp = 1;
+  optional uint64 seq = 2;
+  optional double steering_angle = 3;
+  optional double pedal_position = 4;
+  optional double throttle_position = 5;
+  optional double steering_max_ang_vel =6;
+};
+
+//receive
+message NiroStatus {
+  optional uint64 timestamp = 1;
+  optional uint64 seq = 2;
+  optional double steering_angle = 3;
+  optional double brake_pressure = 4;
+  optional double wheel_speed = 5;
+};
+
+
+message Kia_niro {
+  optional NiroCommand nirocommand=1;
+  optional NiroStatus  nirostatus=2;
+}
