@@ -1,5 +1,5 @@
 vehicle_param {
-  brand: KIA_NIRO
+  brand: NIRO
 
   front_edge_to_center: 3.60
   back_edge_to_center: 0.75
