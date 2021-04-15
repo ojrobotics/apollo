@@ -4,7 +4,7 @@ For using `apollo/modules/tools/` in Apollo do the following:
 
 * Inside docker, install: 
 
-`sudo apt-get install python3-tk`
+```sudo apt-get install python3-tk```
 
 * Make a new folder inside `apollo` root dir and link it to `bazel-bin`. This will make a linkage for python correct import.
 
