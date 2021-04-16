@@ -44,7 +44,7 @@ python
 >>import bazelbin
 >>exit()
 ```
-* Run the tool, for example:
+* Run the tool, for example `mapshow.py`, refere to https://github.com/ApolloAuto/apollo/blob/master/modules/tools/mapshow/README.md and run:
 
 ```bash
 python modules/tools/mapshow/mapshow.py -m modules/map/data/borregas_ave/base_map.bin
