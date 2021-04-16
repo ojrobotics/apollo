@@ -36,5 +36,14 @@ sys.path.append('/apollo')
 from bazelbin.modules.localization.proto.localization_pb2
 ```
 
+* In docker, write:
+
+```bash
+python
+>>import modules
+>>import bazelbin
+>>exit()
+```
+
 Note that to run `gmapviewr.py`, you need _Goole Maps Platform API's key_.   
 
