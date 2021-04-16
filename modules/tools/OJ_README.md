@@ -44,6 +44,12 @@ python
 >>import bazelbin
 >>exit()
 ```
+* Run the tool, for example:
+
+```bash
+python modules/tools/mapshow/mapshow.py -m modules/map/data/borregas_ave/base_map.bin
+```
+
 
 Note that to run `gmapviewr.py`, you need _Goole Maps Platform API's key_.   
 
