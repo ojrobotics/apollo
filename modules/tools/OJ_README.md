@@ -44,6 +44,11 @@ python
 >>import bazelbin
 >>exit()
 ```
+* To setup PYTHONPATH, Run: 
+```bash
+source scripts/apollo_base.sh
+```
+
 * Run the tool, for example `mapshow.py`, refere to https://github.com/ApolloAuto/apollo/blob/master/modules/tools/mapshow/README.md and run:
 
 ```bash
