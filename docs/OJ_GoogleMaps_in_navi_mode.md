@@ -5,3 +5,4 @@
 * Change `map: "BaiduMap"` to `map: "GoogleMap"`
 * In the `mapAPiUrl`: replace the url with this one `"https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"`. Put your API key in `YOUR_API_KEY`.
 
+
