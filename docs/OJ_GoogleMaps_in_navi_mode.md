@@ -4,5 +4,6 @@
 * Follow the instructions in 4.1 at (https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_use_apollo_2.5_navigation_mode.md). 
 * Change `map: "BaiduMap"` to `map: "GoogleMap"`
 * In the `mapAPiUrl`: replace the url with this one `"https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"`. Put your API key in `YOUR_API_KEY`.
+* After finishing all the steps, run the `LGSVL simulator`, `bootstrap_lgsvl.sh` and `bridge.sh` then you should see the Google Maps with the Dreamview and the car position on the map.  
 
 
