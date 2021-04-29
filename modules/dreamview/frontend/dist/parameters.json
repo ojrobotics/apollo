@@ -332,7 +332,7 @@
 	},
 	"navigation": {
 		"map": "GoogleMap",
-		"mapAPiUrl": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_HfNDJIGuzREvWngRCsfDnQ2quDA-aU&callback=initMap"
+		"mapAPiUrl": "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
 	},
 	"debug": {
 		"autoMonitorMessage": false,
